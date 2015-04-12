@@ -1,0 +1,101 @@
+/* defining html{ } instead of body{} because there is nothing in the body area therefore nothing will be displayed.*/
+/* to see any effect in the BODY area, there has to be something in the body. */
+
+/* whenever working with images, be aware if the resolution remains, if the image might be cropped... */
+
+
+html
+{
+		/*background: cornflowerblue;*/
+	background-image: url(images/under_water.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	/* perhaps we can do
+		background-position: right centre;
+	*/
+	min-height: 100%;
+	background-size:cover; /*the other: contain meaning the image is always displayed */
+	/* cover: always cover the whole window */
+}
+
+/* control NAV element here for the position of the navigation bar. DO NOT go to NAV UL to do the tweaking */
+nav
+{
+	float: right; /* the default is left-- that is how the browser layout elements. 
+	from left to right... from top to down... */
+}
+
+nav ul
+{
+	list-style: none; /*no bullet */
+	padding: 0; /* no default padding and no default margin for the list box */
+	margin: 0;
+}
+
+nav li
+{
+	float: left;
+}
+
+nav a 
+{
+	color: white;
+	display: block; 
+	/* a element is usually inline element, here we turn it into a block element, 
+	so we can control its vertical position */
+	padding: 20px;
+	background: rgba(0,0,0,.5); /*a: alpha for transluency */
+	border: 1px solid orange;
+	
+	text-decoration: none; /* to remove the underline for the text. */
+}
+
+nav a:hover
+{
+	background: rgba(0,0,0,1);
+}
+
+/* now let's tackle the responsive programming stuff */
+/* 480px might be the threshold for tablets
+
+
+*/@media screen and (min-width: 480px)
+{
+	html
+	{
+		background-image: url(images/landscape.jpg);
+	}
+	
+	nav button
+	{
+		display: none;
+	}
+	
+}
+
+
+*/@media screen and (min-width: 700px)
+{
+	html
+	{
+		background-image: url(images/under_water.jpg);
+	}
+	
+
+}
+
+/* wrong way of doing things!! In this case, you HAVE TO be very close to 
+ list item to see the hand symbol. background-image: url(images/landscape.jpg);
+nav li
+{
+	float: left;
+	padding: 20px;
+	background: black;
+	border: 1px solid orange;
+}
+
+nav a 
+{
+	color: white;
+}
+*/
