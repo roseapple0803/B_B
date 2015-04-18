@@ -1,22 +1,126 @@
 <!doctype html>
 <html>
-  	<head>
-		<title>CSS Background</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<!-- here is a navigation bar -->
-		<nav>
-			<button>Menu</button>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Social</a></li>
-				<li><a href="#">Blog</a></li>
-			</ul>
-		
-		</nav>
+    <head>
+        <title>You Can Call Me Aquaman</title>
+        <link rel="stylesheet" href="style.css"/>
 
-	</body>
+
+    </head>
+
+    <body>
+        <h1>My Name is Aquaman</h1>
+
+		<!-- copy from index.html from responsive folder -->
+		<nav>
+            <button class="display_toggle">Menu</button>
+            <ul>
+                <li><button class="about_btn">About</button></li>
+                <li><button class="work_btn">Work</button></li>
+                <li><button class="future_btn">Future</button></li>
+                <li><button class="contact_btn">Contact</button></li>
+            </ul>
+
+        </nav>
+	
+		
+		
+        <!-- This entire article is wrapped inside an <article> tag -->
+        <article>
+                
+        
+            <div class="intro">
+                <p>My name is Aquaman. As you might be able to tell by my name, I spend a lot of time in the water (<a href="http://www.thefreedictionary.com/aqua" title="Proof that Aqua means water" target="_blank">aqua means water</a>).</p>
+                
+                <p>I fight a lot of crime, especially any types of bad things occuring either on or beneath the surface of the water.</p>
+            
+            </div>
+
+            <section class="about_section">
+                <h2>About Me</h2>
+				
+				<!-- add a close button here  -->
+				<button class="closeNow">
+					Close
+				</button>	
+                
+				
+				<p><img src="aquaman.jpg" alt="It is Aquaman" /> 
+                Some people call me a superhero, but actually, I am just doing my job. My dad was outcast from the lost city of Atlantis, so my ability to breathe underwater is all genetics. My other skills that allow me to get the upperhand on bad guys include the ability to swim fast, and the ability to communicate with marine life to get them to help me out.</p>
+            </section>
+
+
+            <section class="work_section">
+
+                <h2>What I Do For a Living</h2>
+				
+				<!-- add a close button here  -->
+				<button class="closeNow">
+					Close
+				</button>	
+				
+                <p>Well, as far as I can see, there does not seem to be any end to villainy. As much as I might try to stop bad guys, it seems that every day I wake up: another and another and another.</p>
+
+                <p>Some of my main enemies right now:</p>
+                <h3>Under-Water Villains</h3>
+                <ul>
+                    <li>Aquabeast</li>
+                    <li>Black Manta</li>
+                    <li>The Creature King</li>
+                    <li id="jerk">Ocean Master (biggest jerk of them all)</li>
+                    <li>Mr. Neptune</li>
+                    <li>King Sohark</li>
+                </ul>
+
+                <h3>Land Villains</h3>
+
+                <ul>
+                    <li class="land">Count Vitto</li>
+                    <li class="land">Dr. Starbuck</li>
+                    <li class="land">Electric Man</li>
+                    <li class="land">Tiamat</li>
+                </ul>                
+
+                <p>I spend a lot of time kicking it with other super heros in the <a href="http://en.wikipedia.org/wiki/Justice_League" title="The Justice League" target="_blank">Justice League</a>: Superman, Batman, Wonder Woman, the Flash, and the rest of the crew. We go through stretches where we don't see each other too often (generally tangled up with trying to stop some elaborate villainous plot), but we always keep in touch.</p>
+                <p>My short-term plans are basically to keep doing what I am doing until hopefully we can figure out some way of getting the upper hand on evil as a whole.</p>
+                <p>Right now, my biggest concern is (obviously) the environment. It's a hard struggle trying to get these jerks to stop messing up the waters on this planet.</p>
+            </section>
+
+
+            <section class="future_section">
+                
+                <h2>The Future</h2>
+				
+				<!-- add a close button here  -->
+				<button class="closeNow">
+					Close
+				</button>	
+				
+                <p>Hopefully, after all this nonsense stops, I'd like to settle down and have a family.</p>
+
+                <p>Every once in a while I come across an interesting woman or mermaid, but the demands of my job always seem to make the relationship go sour.</p>
+
+                <p>Fortunately, unlike people like Batman or Superman, I don't have to mess with trying to maintain an alter-ego (I don't know how those guys do it!).</p>
+                
+                <p>I would also eventually like to spend a bit more time on land or maybe even make it into outer space. Just because I'm Aquaman doesn't mean I don't have ambitions to see other things in other places.</p>
+            </section>
+
+            <section class="contact_section">
+                
+                <h2>Where to Find Out More</h2>
+				
+				<!-- add a close button here  -->
+				<button class="closeNow">
+					Close
+				</button>	
+				
+                <p>If you want to find out more about me, or keep in touch, you can follow me on <a href="https://twitter.com/aquaman" title="Aquaman on Twitter" target="_blank">Twitter</a>.</p>
+
+            </section>
+
+        </article>
+
+        <script src="jquery-1.11.2.js"></script>
+        <script src="script.js"></script>
+
+    </body>
 </html>

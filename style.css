@@ -1,101 +1,254 @@
-/* defining html{ } instead of body{} because there is nothing in the body area therefore nothing will be displayed.*/
-/* to see any effect in the BODY area, there has to be something in the body. */
-
-/* whenever working with images, be aware if the resolution remains, if the image might be cropped... */
-
-
-html
-{
-		/*background: cornflowerblue;*/
-	background-image: url(images/under_water.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	/* perhaps we can do
-		background-position: right centre;
-	*/
-	min-height: 100%;
-	background-size:cover; /*the other: contain meaning the image is always displayed */
-	/* cover: always cover the whole window */
+html {
+    background-image: url(under_water.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    min-height: 100%;
+    background-size: cover;
+	background-attachment: fixed;
 }
 
-/* control NAV element here for the position of the navigation bar. DO NOT go to NAV UL to do the tweaking */
-nav
-{
-	float: right; /* the default is left-- that is how the browser layout elements. 
-	from left to right... from top to down... */
+body {
+	color: darkorange;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
-nav ul
-{
-	list-style: none; /*no bullet */
-	padding: 0; /* no default padding and no default margin for the list box */
+h1 {
+	font-size: 48px;
+	font-weight: bold;
+	color: white;
+}
+
+h2 {
+	text-decoration: underline;
+	font-style: italic;
+	color: green;
+}
+
+a {
+	color: green;
+}
+
+a:hover {
+	background: green;
+	color: white;
+}
+
+img {
+	border-width: 5px;
+	border-style: solid;
+	border-color: green;
+	float: left;
+	width: 50%;
+	max-width: 150px;
+	margin-right: 10px;
+}
+
+body {
+	line-height: 1.5;
+}
+
+h2 {
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+li {
+	color: blue;
+}
+
+.land {
+	color: brown;
+}
+
+#jerk {
+	font-weight: bold;
+}
+
+h1 {
+	width: 90%;
+	margin: 50px auto 20px;
+	text-align: center;
+}
+
+.intro {
+	width: 90%;
+	margin: auto;
+	background: rgba(255,255,255,.8);
+	padding: 20px;
+}
+
+@media screen and (min-width: 500px) {
+	h1 {
+		width: 90%;
+		margin: 20px 50px;
+		text-align: left;
+	}
+
+	.intro {
+		width: 50%;
+		max-width: 500px;
+		margin: 0 50px;
+		clear: both;
+	}
+}
+
+
+@media screen and (min-width: 500px) {
+	section {
+		width: 50%;
+		max-width: 500px;
+		background: rgba(0,0,0,.8);
+		padding: 20px;
+		margin: 0 50px;
+	}
+}
+
+
+/* copy from style.css in responsive */
+
+nav {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: rgba(0,0,0,.8);
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
 	margin: 0;
 }
 
-nav li
-{
-	float: left;
-}
-
-nav a 
-{
+nav button {
+	width: 100%;
+	background: none;
+	padding: 10px 0;
+	display: block;
 	color: white;
-	display: block; 
-	/* a element is usually inline element, here we turn it into a block element, 
-	so we can control its vertical position */
-	padding: 20px;
-	background: rgba(0,0,0,.5); /*a: alpha for transluency */
-	border: 1px solid orange;
-	
-	text-decoration: none; /* to remove the underline for the text. */
+	border: none;
+	cursor: pointer;
 }
 
-nav a:hover
-{
-	background: rgba(0,0,0,1);
+nav button:hover {
+	background: white;
+	color: black;
 }
 
-/* now let's tackle the responsive programming stuff */
-/* 480px might be the threshold for tablets
+
+nav .display_toggle {
+	display: block;
+}
+
+nav ul{
+	display: none;
+}
+
+nav.active ul{
+    display: block;
+}
 
 
-*/@media screen and (min-width: 480px)
-{
-	html
-	{
-		background-image: url(images/landscape.jpg);
+@media screen and (min-width: 500px) {
+
+	nav {
+		position: relative;
+		overflow: hidden;
+		float: left;
+		width: auto;
+		margin: 0 50px 20px;
 	}
-	
-	nav button
-	{
+
+	nav li {
+		float: left;
+	}
+
+	nav button {
+		padding: 20px;
+	}
+
+	nav ul{
+		display: block;
+	}
+
+	nav .display_toggle {
 		display: none;
 	}
-	
+}
+
+/* copy the codes from the previous example to set the default look */
+
+
+section
+{
+	display: none;
 }
 
 
-*/@media screen and (min-width: 700px)
-{
-	html
-	{
-		background-image: url(images/under_water.jpg);
-	}
-	
 
+.about_state .about_section
+{
+	display: block;
 }
 
-/* wrong way of doing things!! In this case, you HAVE TO be very close to 
- list item to see the hand symbol. background-image: url(images/landscape.jpg);
-nav li
+.work_state .work_section
 {
-	float: left;
+	display: block;
+}
+
+
+.contact_state .contact_section
+{
+	display: block;
+}
+
+.future_state  .future_section
+{
+	display: block;
+}
+
+
+/* add this to deal with the menu while in mobile display */
+section
+{
+	position: absolute;
+	top: 0;
+	background: rgba(0,0,0,.8);
 	padding: 20px;
-	background: black;
-	border: 1px solid orange;
 }
 
-nav a 
+
+@media screen and (min-width: 500px)
 {
-	color: white;
+	section
+	{
+		width: 75%;
+		right: 0;
+	}
 }
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
