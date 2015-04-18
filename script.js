@@ -1,4 +1,4 @@
-// copy from responsve folder
+/* copy from responsve folder */
 
 $('.display_toggle').on('click',function(){
     $('nav').toggleClass('active');
@@ -7,7 +7,7 @@ $('.display_toggle').on('click',function(){
 
 
 
-// the piece of codes here could be re-used for all the general cases!!
+/* the piece of codes here could be re-used for all the general cases!! */
 
 
 $('.work_btn').on('click',function()
@@ -31,7 +31,7 @@ $('.contact_btn').on('click',function()
 	}
 );
 
-//when someone clicks on close button, we want NO information to be displayed
+/* when someone clicks on close button, we want NO information to be displayed */
 $('.closeNow').on('click',function()
 	{
 		$('body').attr('class', ''); //which is to set 'body' --> its attribute 'class' to the value 'work_state'
